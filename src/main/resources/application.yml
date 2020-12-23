@@ -29,3 +29,12 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 
+#配置mybatis
+mybatis:
+#  配置mapper文件所在位置
+  mapper-locations: classpath:com/hr/springboot/mapper/*.xml
+  configuration:
+    #  开启驼峰匹配规则
+    map-underscore-to-camel-case: true
+#  pojo别名
+  type-aliases-package: com.hr.springboot.pojo
