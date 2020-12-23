@@ -18,8 +18,8 @@ public class DeptController {
         return dept;
     }
 
-    @PostMapping("/dept")
-    public Department insertDept(@RequestBody Department department) {
+    @RequestMapping("/dept")
+    public Department insertDept(Department department) {
         departmentMapper.inserDept(department);
         return department;
     }
